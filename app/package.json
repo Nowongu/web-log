@@ -1,0 +1,33 @@
+{
+  "name": "web-log",
+  "version": "1.0.0",
+  "description": "Logs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"npm dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nowongu/web-log.git"
+  },
+  "keywords": [
+    "logging"
+  ],
+  "author": "Nowongu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nowongu/web-log/issues"
+  },
+  "homepage": "https://github.com/Nowongu/web-log#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.16",
+    "@types/node": "^18.11.18"
+  }
+}
