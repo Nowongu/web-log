@@ -24,4 +24,4 @@ jobs:
     steps:
     - name: Make envfile
       run: |
-        echo "${{ secrets.ENV_FILE }}" > ${{ github.GITHUB_WORKSPACE }}/app/.env
+        echo "${{ secrets.ENV_FILE }}" > ${{ github.GITHUB_WORKSPACE }}/.env
