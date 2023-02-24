@@ -48,15 +48,20 @@ class MyDatabase
     }
 
 
-    // public write_log = (message: string) => {
-    //     const query = `INSERT INTO log (time, message) VALUES (?, ?)`
-    //     this.db.run(query, [new Date().toISOString(), message])
-    // }
+    public write_log = (message: string) => {
+        const query = `INSERT INTO log (time, message) VALUES (?, ?)`
+        this.connection.run(query, [new Date().toISOString(), message])
+    }
+    
+    public clear_log = () => {
+        const query = `DELETE FROM log`
+        this.connection.run(query)
+    }
 
     // public read_log = () : string[] => {
     //     const query = `SELECT * FROM log LIMIT 20`
     //     const result: string[] = []
-    //     this.db.all(query, result)
+    //     this.connection.all(query, result)
     //     return result
     // }
 }
